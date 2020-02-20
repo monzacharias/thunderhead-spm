@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "Thunderhead",
+    name: "Thunderhead.embeddedframework",
     platforms: [
         .iOS(.v8),
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "Thunderhead",
-            targets: ["Thunderhead"]),
+            name: "Thunderhead.embeddedframework",
+            targets: ["Thunderhead.embeddedframework"]),
     ],
     dependencies: [
         // no dependencies
@@ -21,11 +21,10 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "Thunderhead",
-            dependencies: [],
-            path: "Thunderhead.embeddedframework"),
+            name: "Thunderhead.embeddedframework",
+            dependencies: []),
         .testTarget(
             name: "ThunderheadTests",
-            dependencies: ["Thunderhead"]),
+            dependencies: []),
     ]
 )
